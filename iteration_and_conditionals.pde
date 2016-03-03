@@ -11,13 +11,17 @@ void setup() {
 
 void draw() {
   x += 1;
+  y += 1;
   background(255);
   ellipseMode(CENTER);
-  ellipse(- diameter + x, width/2, diameter, diameter);
-  // add another ellipse in starting from top corner of screen
-  ellipse(- diameter + x, - diameter, diameter, diameter);
-  if (x > width + (diameter + 25)) { // reset the x val once the circle has left the screen so it enters on the left again
+  ellipse(- diameter/2 + x, width/2, diameter, diameter);
+  // add another ellipse in fom the middle of the screen
+  ellipse(width/2, - diameter/2 + y, diameter, diameter);
+  if (x > width + diameter) { // reset the x val once the circle has left the screen so it enters on the left again
     x = 0;
+  }
+  if (y > height + diameter) {
+    y = 0;
   }
   println("In draw function, x has this value: ");
   println(x);
