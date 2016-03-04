@@ -15,9 +15,7 @@ void draw() {
     line(3 * x + lineCordinates[0], lineCordinates[1], 3 * x + lineCordinates[2], lineCordinates[3]); // multiply x by three to increase distance between lines and add the existing line coordinates
   }
   if (3 * x + lineCordinates[0] >= 600) { // check if the lines have exceeded the width of the screen and redraw the animation
-    line( 3 * 1 + lineCordinates[0], lineCordinates[1], 3 * 1 + lineCordinates[2], lineCordinates[3]);
     background(255);
-    line( 3 * 1 + lineCordinates[0], lineCordinates[1], 3 * 1 + lineCordinates[2], lineCordinates[3]);
     x = 0;
   }
   println("In draw function, x has this value: ");
