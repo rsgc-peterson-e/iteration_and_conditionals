@@ -6,7 +6,6 @@ void setup() {
   size(600, 200);
   fill(255);
   background(255);
-  frameRate(60);
 }
 
 void draw() {
