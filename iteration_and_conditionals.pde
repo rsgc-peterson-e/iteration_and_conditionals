@@ -1,5 +1,5 @@
 float x = 0;
-float[] lineCordinates = {100, 175, 200, 25}; // array storing the x1 y1 x2 y2 of the line
+float[] lineCordinates = {30, 175, 200, 25}; // array storing the x1 y1 x2 y2 of the line
 
 void setup() {
   // Create canvas to work on
@@ -12,10 +12,10 @@ void setup() {
 
 void draw() {
   x += 1;
-  if (x % 40 == 0) {
-    line(lineCordinates[0] + x, lineCordinates[1], lineCordinates[2] + x, lineCordinates[3]);
+  if (x % 10 == 0) {
+    line(3 * x + lineCordinates[0], lineCordinates[1], 3 * x + lineCordinates[2], lineCordinates[3]);
   }
-  if (lineCordinates[1] + x >= 600) { // check if the lines have exceeded the width of the screen and redraw the animation
+  if (3 * x + lineCordinates[0] >= 600) { // check if the lines have exceeded the width of the screen and redraw the animation
     x = 0;
     background(255);
     line(lineCordinates[0], lineCordinates[1], lineCordinates[2], lineCordinates[3]);
