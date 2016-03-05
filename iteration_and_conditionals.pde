@@ -10,13 +10,19 @@ void setup() {
 
 void draw() {
   x += 1;
-  if (x % 10 == 0) {
-    line(3 * x + lineCordinates[0], lineCordinates[1], 3 * x + lineCordinates[2], lineCordinates[3]); // multiply x by three to increase distance between lines and add the existing line coordinates
-  }
+
   if (3 * x + lineCordinates[0] >= 600) { // check if the lines have exceeded the width of the screen and redraw the animation
     background(255);
     x = 0;
   }
   println("In draw function, x has this value: ");
   println(x);
+  strokeWeight(0.5);
+  arrow(575, height/2, 40, 20);
+  strokeWeight(1);
+}
+
+void arrow(int lx, int ly, int distX, int distY) {
+  line(lx, ly, lx + distX, ly + distY);
+  line(lx, ly, lx + distX, ly - distY);
 }
