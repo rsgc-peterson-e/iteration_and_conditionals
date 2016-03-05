@@ -1,5 +1,6 @@
 float x = 0; // x to canvas width because the arrows will be drawn in the oppisite direction meaning that the x val will be decreased everytime draw loops
 float arrowX = 600;
+
 void setup() {
   // Create canvas to work on
   size(600, 200);
@@ -16,6 +17,7 @@ void draw() {
     println(x);
   }
 }
+
 void arrow(float lx, int ly, int distX, int distY) {
   line(lx, ly, lx + distX, ly + distY);
   line(lx, ly, lx + distX, ly - distY);
