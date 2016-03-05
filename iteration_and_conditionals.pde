@@ -1,6 +1,5 @@
-float x = 0;
-float[] lineCordinates = {30, 175, 200, 25}; // array storing the x1 y1 x2 y2 of the line
-
+float x = 0; // x to canvas width because the arrows will be drawn in the oppisite direction meaning that the x val will be decreased everytime draw loops
+float arrowX = 600;
 void setup() {
   // Create canvas to work on
   size(600, 200);
@@ -9,20 +8,15 @@ void setup() {
 }
 
 void draw() {
-  x += 1;
-
-  if (3 * x + lineCordinates[0] >= 600) { // check if the lines have exceeded the width of the screen and redraw the animation
-    background(255);
-    x = 0;
+  x -= 1;
+  // println("In draw function, x has this value: ");
+  // println(x);
+  if (x % 10 == 0) {
+    arrow(3 * x + 600, height/2, 120, 60);
+    println(x);
   }
-  println("In draw function, x has this value: ");
-  println(x);
-  strokeWeight(0.5);
-  arrow(575, height/2, 40, 20);
-  strokeWeight(1);
 }
-
-void arrow(int lx, int ly, int distX, int distY) {
+void arrow(float lx, int ly, int distX, int distY) {
   line(lx, ly, lx + distX, ly + distY);
   line(lx, ly, lx + distX, ly - distY);
 }
