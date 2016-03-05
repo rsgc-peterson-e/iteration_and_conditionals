@@ -10,9 +10,9 @@ void setup() {
 
 void draw() {
   y += 1;
-  println("In draw function, x has this value: ");
-  println(x);
-
+  println("In draw function, y has this value: ");
+  println(y);
+  cross(width/2, height/2, 1);
 }
 
 void cross(float crossX, float crossY, float crossScale) { // function to draw cross and change its scale for the animation
