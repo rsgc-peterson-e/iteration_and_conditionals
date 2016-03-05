@@ -1,4 +1,4 @@
-float x = 0; // x to canvas width because the arrows will be drawn in the oppisite direction meaning that the x val will be decreased everytime draw loops
+float y = 0;
 float arrowX = 600;
 
 void setup() {
@@ -9,19 +9,13 @@ void setup() {
 }
 
 void draw() {
-  x -= 1;
+  y += 1;
   println("In draw function, x has this value: ");
   println(x);
-  if (x == -200) {
-    x = 0;
-    background(255);
-  }
-  if (x % 10 == 0) { // draw arrow every time x has decrimented 10 times
-    arrow(3 * x + arrowX, height/2, 120, 60);
-  }
+
 }
 
-void arrow(float lx, int ly, int distX, int distY) {
-  line(lx, ly, lx + distX, ly + distY);
-  line(lx, ly, lx + distX, ly - distY);
+void cross(float crossX, float crossY, float crossScale) { // function to draw cross and change its scale for the animation
+  line(crossX - 1 * crossScale, crossY + 1 * crossScale, crossX + 1 * crossScale, crossY - 1 * crossScale);
+  line(crossX - 1 * crossScale, crossY - 1 * crossScale, crossX + 1 * crossScale, crossY + 1 * crossScale);
 }
