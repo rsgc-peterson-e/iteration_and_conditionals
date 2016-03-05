@@ -1,4 +1,4 @@
-float x = 0; // x to canvas width because the arrows will be drawn in the oppisite direction meaning that the x val will be decreased everytime draw loops
+float x = 0;
 float arrowX = 600;
 
 void setup() {
