@@ -10,15 +10,14 @@ void setup() {
 
 void draw() {
   x -= 1;
-  // println("In draw function, x has this value: ");
-  // println(x);
+  println("In draw function, x has this value: ");
+  println(x);
   if (x == -200) {
     x = 0;
     background(255);
   }
-  if (x % 10 == 0) {
-    arrow(3 * x + 600, height/2, 120, 60);
-    println(x);
+  if (x % 10 == 0) { // draw arrow every time x has decrimented 10 times
+    arrow(3 * x + arrowX, height/2, 120, 60);
   }
 }
 
