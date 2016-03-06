@@ -16,9 +16,9 @@ void draw() {
   if (y % 10 == 0) {
     x += 25;
     textSize(x);
-    text("X", width/2 - textWidth("X")/2, y * textWidth("X")/3);
+    text("X", width/2 - textWidth("X")/2, y * textWidth("X")/7);
   }
-  if (y * textWidth("X")/3 > height) {
+  if (y * textWidth("X")/7 > height) {
     y = 0;
     x = 0;
     background(255);
