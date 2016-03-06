@@ -12,6 +12,7 @@ void draw() {
   println("In draw function, y has this value: ");
   println(y);
   fill(0);
-  textSize(25);
-  text("X", width/2 - textWidth("X")/2, 25);
+  if (y % 50 == 0) {
+    text("X", width/2 - textWidth("X")/2, y);
+  }
 }
