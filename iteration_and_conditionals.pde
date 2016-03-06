@@ -12,10 +12,6 @@ void draw() {
   y += 1;
   println("In draw function, y has this value: ");
   println(y);
-  cross(width/2, height/2, 1);
-}
-
-void cross(float crossX, float crossY, float crossScale) { // function to draw cross and change its scale for the animation
-  line(crossX - 1 * crossScale, crossY + 1 * crossScale, crossX + 1 * crossScale, crossY - 1 * crossScale);
-  line(crossX - 1 * crossScale, crossY - 1 * crossScale, crossX + 1 * crossScale, crossY + 1 * crossScale);
+  fill(0);
+  text("X", width/2 - textWidth("X"), height/2);
 }
