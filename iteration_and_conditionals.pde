@@ -1,9 +1,8 @@
 float y = 0;
-float arrowX = 600;
 
 void setup() {
   // Create canvas to work on
-  size(600, 200);
+  size(200, 600);
   fill(255);
   background(255);
 }
@@ -13,5 +12,6 @@ void draw() {
   println("In draw function, y has this value: ");
   println(y);
   fill(0);
-  text("X", width/2 - textWidth("X"), height/2);
+  textSize(25);
+  text("X", width/2 - textWidth("X")/2, 25);
 }
